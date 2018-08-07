@@ -1,0 +1,36 @@
+{
+  "name": "webpack-config",
+  "version": "1.0.0",
+  "description": "Shareable webpack configuration",
+  "main": "src/index.js",
+  "dependencies": {
+    "husky": "^1.0.0-rc.13"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.0.1",
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "npx git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebacruz/webpack-config.git"
+  },
+  "keywords": [
+    "webpack",
+    "configuration"
+  ],
+  "author": "Sebastian Cruz <sebacruzcode@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebacruz/webpack-config/issues"
+  },
+  "homepage": "https://github.com/sebacruz/webpack-config#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
