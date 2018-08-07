@@ -3,17 +3,21 @@
   "version": "0.0.0",
   "description": "Shareable webpack configuration",
   "main": "src/index.js",
-  "dependencies": {
-    "husky": "^1.0.0-rc.13"
-  },
+  "dependencies": {},
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.1",
-    "cz-conventional-changelog": "^2.1.0"
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.14.0",
+    "xo": "^0.22.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "npx git-cz",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "cz": "npx git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "lint": "xo"
   },
   "repository": {
     "type": "git",
@@ -32,6 +36,21 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    }
+  },
+  "xo": {
+    "extends": "prettier"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "npm run lint",
+      "prettier --single-quote --no-semi --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   }
 }
