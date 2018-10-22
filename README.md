@@ -2,4 +2,13 @@
 
 > My personal shareable webpack configuration.
 
-⚠️ This is a work in progress.
+## Install
+
+Install the package and its required loaders.
+
+```shell
+$ npm install --save-dev @sebacruz/webpack-config
+$ npm install --save-dev babel-loader css-loader file-loader postcss-loader resolve-url-loader sass-loader style-loader url-loader
+```
+
+See the [`example`](example) directory to see how to set up your webpack config.

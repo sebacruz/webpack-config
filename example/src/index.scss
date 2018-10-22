@@ -1,0 +1,31 @@
+@import "reset.css";
+
+body {
+  background-color: red;
+}
+
+::placeholder {
+  color: gray;
+}
+
+.image-svg,
+.image-png,
+.image-jpg {
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+.image-svg {
+  background-image: url(image.svg);
+}
+
+.image-png {
+  background-image: url(image.png);
+}
+
+.image-jpg {
+  background-image: url(image.jpg);
+}

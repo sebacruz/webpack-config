@@ -1,0 +1,25 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "@sebacruz/webpack-config example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.prod.js",
+    "build:dev": "webpack --config webpack.dev.js",
+    "start:dev": "webpack-dev-server --config webpack.dev.js"
+  },
+  "author": "Sebastian Cruz <sebacruzcode@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@sebacruz/webpack-config": "^1.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
