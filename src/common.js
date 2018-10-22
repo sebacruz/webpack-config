@@ -1,19 +1,19 @@
-const has = require('lodash/has')
-const get = require('lodash/get')
-const merge = require('webpack-merge')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const WebpackManifestPlugin = require('webpack-manifest-plugin')
+const has = require('lodash/has');
+const get = require('lodash/get');
+const merge = require('webpack-merge');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const WebpackManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = nextConfig => {
   const config = {
     output: {},
     module: {},
     plugins: []
-  }
+  };
 
   config.output = {
     filename: '[name].js'
-  }
+  };
 
   config.module.rules = [
     {
@@ -26,21 +26,21 @@ module.exports = nextConfig => {
         }
       }
     }
-  ]
+  ];
 
-  config.plugins.push(new WebpackManifestPlugin())
+  config.plugins.push(new WebpackManifestPlugin());
 
   if (has(nextConfig, 'output.path')) {
     // https://stackoverflow.com/a/18721515/4826045
-    const root = process.cwd()
+    const root = process.cwd();
 
-    const outputPath = get(nextConfig, 'output.path')
+    const outputPath = get(nextConfig, 'output.path');
     const toClean = [
       // Make output path relative to the process path
       // eslint-disable-next-line no-warning-comments
       // TODO find a better way to do this
       outputPath.replace(root, '.')
-    ]
+    ];
 
     config.plugins.push(
       new CleanWebpackPlugin(toClean, {
@@ -48,8 +48,8 @@ module.exports = nextConfig => {
         // If we dont do this, it will use the package path
         root
       })
-    )
+    );
   }
 
-  return merge(config, nextConfig)
-}
+  return merge(config, nextConfig);
+};

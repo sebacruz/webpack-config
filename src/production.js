@@ -1,9 +1,9 @@
-const path = require('path')
-const { existsSync } = require('fs')
-const merge = require('webpack-merge')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const ImageminPlugin = require('imagemin-webpack-plugin').default
-const imageminMozjpeg = require('imagemin-mozjpeg')
+const path = require('path');
+const { existsSync } = require('fs');
+const merge = require('webpack-merge');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports = nextConfig => {
   const config = {
@@ -15,16 +15,16 @@ module.exports = nextConfig => {
       rules: []
     },
     plugins: []
-  }
+  };
 
-  const projectPostCssConfig = path.resolve(process.cwd(), 'postcss.config.js')
+  const projectPostCssConfig = path.resolve(process.cwd(), 'postcss.config.js');
   const postCssOptions = {
     sourceMap: true,
     config: {}
-  }
+  };
 
   if (!existsSync(projectPostCssConfig)) {
-    postCssOptions.config.path = path.resolve(__dirname, '../config')
+    postCssOptions.config.path = path.resolve(__dirname, '../config');
   }
 
   config.module.rules.push({
@@ -54,7 +54,7 @@ module.exports = nextConfig => {
         }
       }
     ]
-  })
+  });
 
   config.module.rules.push({
     test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)(\?\S*)?$/,
@@ -67,13 +67,13 @@ module.exports = nextConfig => {
         }
       }
     ]
-  })
+  });
 
   config.plugins.push(
     new MiniCssExtractPlugin({
       filename: '[name].[chunkhash].css'
     })
-  )
+  );
 
   config.plugins.push(
     new ImageminPlugin({
@@ -88,7 +88,7 @@ module.exports = nextConfig => {
         })
       ]
     })
-  )
+  );
 
-  return merge.smart(nextConfig, config)
-}
+  return merge.smart(nextConfig, config);
+};

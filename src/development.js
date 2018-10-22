@@ -1,4 +1,4 @@
-const merge = require('webpack-merge')
+const merge = require('webpack-merge');
 
 module.exports = nextConfig => {
   const config = {
@@ -10,7 +10,7 @@ module.exports = nextConfig => {
     module: {
       rules: []
     }
-  }
+  };
 
   config.module.rules.push({
     test: /\.css$/,
@@ -26,7 +26,7 @@ module.exports = nextConfig => {
         }
       }
     ]
-  })
+  });
 
   config.module.rules.push({
     test: /\.scss$/,
@@ -51,7 +51,7 @@ module.exports = nextConfig => {
         }
       }
     ]
-  })
+  });
 
   config.module.rules.push({
     test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)(\?\S*)?$/,
@@ -60,14 +60,14 @@ module.exports = nextConfig => {
         loader: 'url-loader'
       }
     ]
-  })
+  });
 
   config.devServer = {
     // By default, we use the /assets/ path to store our compiled packages
     publicPath: '/assets/'
 
     // The `contentBase` property should be setted by-project.
-  }
+  };
 
-  return merge(nextConfig, config)
-}
+  return merge(nextConfig, config);
+};
