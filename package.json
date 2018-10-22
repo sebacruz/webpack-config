@@ -1,6 +1,6 @@
 {
   "name": "@sebacruz/webpack-config",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Shareable webpack configuration",
   "main": "src/index.js",
   "directories": {
@@ -85,10 +85,15 @@
     "arrowParens": "avoid"
   },
   "lint-staged": {
-    "*.{js,json}": [
-      "npm run lint",
-      "prettier --write",
-      "git add"
+    "linters": {
+      "*.{js,json}": [
+        "xo",
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "example/**"
     ]
   },
   "husky": {
