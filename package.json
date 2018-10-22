@@ -49,7 +49,8 @@
     "cz": "npx git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "lint": "xo",
-    "build": "webpack"
+    "build": "webpack",
+    "prettier": "prettier --write *.{js,json} src/**/*.{js,json}"
   },
   "repository": {
     "type": "git",
