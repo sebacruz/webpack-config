@@ -1,23 +1,55 @@
 {
-  "name": "webpack-config",
-  "version": "0.0.0",
+  "name": "@sebacruz/webpack-config",
+  "version": "0.0.6",
   "description": "Shareable webpack configuration",
   "main": "src/index.js",
-  "dependencies": {},
+  "directories": {
+    "lib": "./src"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "cssnano": "^4.1.7",
+    "cssnano-preset-default": "^4.0.5",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-webpack-plugin": "^2.3.0",
+    "lodash": "^4.17.11",
+    "mini-css-extract-plugin": "0.4.2",
+    "node-sass": "^4.9.3",
+    "postcss-import": "^12.0.0",
+    "postcss-preset-env": "^5.3.0",
+    "resolve-url-loader": "^3.0.0",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-manifest-plugin": "^2.0.4",
+    "webpack-merge": "^4.1.4"
+  },
   "devDependencies": {
-    "conventional-changelog-cli": "^2.0.1",
+    "conventional-changelog-cli": "^2.0.5",
     "cz-conventional-changelog": "^2.1.0",
     "eslint-config-prettier": "^2.9.0",
-    "husky": "^1.0.0-rc.13",
-    "lint-staged": "^7.2.0",
-    "prettier": "^1.14.0",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
     "xo": "^0.22.0"
+  },
+  "peerDependencies": {
+    "babel-loader": "^8.0.0-beta.4",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "postcss-loader": "^3.0.0",
+    "resolve-url-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "url-loader": "^1.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cz": "npx git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "lint": "xo"
+    "lint": "xo",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -40,6 +72,16 @@
   },
   "xo": {
     "extends": "prettier"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid"
   },
   "lint-staged": {
     "*.{js,json}": [
