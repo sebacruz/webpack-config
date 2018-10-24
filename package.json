@@ -23,7 +23,8 @@
     "webpack": "^4.22.0",
     "webpack-cli": "^3.1.2",
     "webpack-manifest-plugin": "^2.0.4",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.4",
+    "snyk": "^1.104.2"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.5",
@@ -50,7 +51,9 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "lint": "xo",
     "build": "webpack",
-    "prettier": "prettier --write *.{js,json} src/**/*.{js,json}"
+    "prettier": "prettier --write *.{js,json} src/**/*.{js,json}",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -100,5 +103,6 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "snyk": true
 }
