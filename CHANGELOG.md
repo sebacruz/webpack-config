@@ -1,7 +1,14 @@
 # Changelog
 
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/sebacruz/webpack-config/compare/1.0.0...1.0.1) (2018-10-25)
+
+### Bug Fixes
+
+* Add webpack-dev-server ([cc8957c](https://github.com/sebacruz/webpack-config/commit/cc8957c))
+
 <a name="1.0.0"></a>
-## 1.0.0 (2018-10-22)
+# [1.0.0](https://github.com/sebacruz/webpack-config/compare/d4e86dd...1.0.0) (2018-10-22)
 
 ### Features
 
