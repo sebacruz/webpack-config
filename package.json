@@ -1,6 +1,6 @@
 {
   "name": "@sebacruz/webpack-config",
-  "version": "1.1.0-dev.2",
+  "version": "1.1.0-dev.4",
   "description": "Shareable webpack configuration",
   "main": "src/index.js",
   "directories": {
@@ -16,6 +16,7 @@
     "cssnano-preset-default": "^4.0.5",
     "file-loader": "^2.0.0",
     "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-webp-webpack-plugin": "^1.0.2",
     "imagemin-webpack-plugin": "^2.3.0",
     "lodash": "^4.17.11",
     "mini-css-extract-plugin": "0.4.2",

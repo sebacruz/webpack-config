@@ -4,6 +4,7 @@ const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 module.exports = nextConfig => {
   const config = {
@@ -89,6 +90,8 @@ module.exports = nextConfig => {
       ]
     })
   );
+
+  config.plugins.push(new ImageminWebpWebpackPlugin());
 
   return merge.smart(nextConfig, config);
 };
