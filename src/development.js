@@ -1,3 +1,4 @@
+const { HotModuleReplacementPlugin } = require('webpack');
 const merge = require('webpack-merge');
 
 module.exports = nextConfig => {
@@ -9,8 +10,19 @@ module.exports = nextConfig => {
     },
     module: {
       rules: []
-    }
+    },
+    plugins: []
   };
+
+  config.module.rules.push({
+    test: /\.js$/,
+    exclude: /(node_modules|bower_components)/,
+    use: [
+      {
+        loader: 'webpack-module-hot-accept'
+      }
+    ]
+  });
 
   config.module.rules.push({
     test: /\.css$/,
@@ -62,12 +74,15 @@ module.exports = nextConfig => {
     ]
   });
 
+  config.plugins.push(new HotModuleReplacementPlugin());
+
   config.devServer = {
-    // By default, we use the /assets/ path to store our compiled packages
-    publicPath: '/assets/'
+    hot: true,
+    overlay: true,
+    inline: true
 
     // The `contentBase` property should be setted by-project.
   };
 
-  return merge(nextConfig, config);
+  return merge.smart(config, nextConfig);
 };

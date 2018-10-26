@@ -1,3 +1,4 @@
+const { basename } = require('path');
 const has = require('lodash/has');
 const get = require('lodash/get');
 const merge = require('webpack-merge');
@@ -15,16 +16,24 @@ module.exports = nextConfig => {
     filename: '[name].js'
   };
 
+  if (!has(nextConfig, 'output.publicPath')) {
+    const publicPath = basename(nextConfig.output.path);
+
+    config.output.publicPath = `/${publicPath}/`;
+  }
+
   config.module.rules = [
     {
       test: /\.js$/,
       exclude: /(node_modules|bower_components)/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env']
+      use: [
+        {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
-      }
+      ]
     }
   ];
 
