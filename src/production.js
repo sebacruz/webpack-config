@@ -93,5 +93,5 @@ module.exports = nextConfig => {
 
   config.plugins.push(new ImageminWebpWebpackPlugin());
 
-  return merge.smart(nextConfig, config);
+  return merge.smart(config, nextConfig);
 };
