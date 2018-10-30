@@ -1,5 +1,10 @@
 # Changelog
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/sebacruz/webpack-config/compare/1.1.0...1.1.1) (2018-10-30)
+
+* Update version number ([a2c861a](https://github.com/sebacruz/webpack-config/commit/a2c861a))
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/sebacruz/webpack-config/compare/1.0.2...1.1.0) (2018-10-30)
 
