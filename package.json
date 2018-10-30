@@ -69,7 +69,15 @@
   },
   "keywords": [
     "webpack",
-    "configuration"
+    "configuration",
+    "node",
+    "javascript",
+    "webdev",
+    "frontend",
+    "css",
+    "sass",
+    "es6",
+    "webpack-dev-server"
   ],
   "author": "Sebastian Cruz <sebacruzcode@gmail.com>",
   "license": "MIT",
