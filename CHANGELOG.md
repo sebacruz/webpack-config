@@ -1,11 +1,15 @@
 # Changelog
 
-<a name="1.1.1"></a>
+## [1.1.2](https://github.com/sebacruz/webpack-config/compare/1.1.1...1.1.2) (2018-11-12)
+
+### Bug Fixes
+
+* package.json to reduce vulnerabilities ([28d61c6](https://github.com/sebacruz/webpack-config/commit/28d61c6))
+
 ## [1.1.1](https://github.com/sebacruz/webpack-config/compare/1.1.0...1.1.1) (2018-10-30)
 
 * Update version number ([a2c861a](https://github.com/sebacruz/webpack-config/commit/a2c861a))
 
-<a name="1.1.0"></a>
 # [1.1.0](https://github.com/sebacruz/webpack-config/compare/1.0.2...1.1.0) (2018-10-30)
 
 ### Bug Fixes
@@ -18,14 +22,12 @@
 * Enable HMR for js files ([0dd37e4](https://github.com/sebacruz/webpack-config/commit/0dd37e4))
 * Enable tree-shaking ([8269ddc](https://github.com/sebacruz/webpack-config/commit/8269ddc))
 
-<a name="1.0.2"></a>
 ## [1.0.2](https://github.com/sebacruz/webpack-config/compare/1.0.0...1.0.2) (2018-10-25)
 
 ### Bug Fixes
 
 * Add webpack-dev-server ([cc8957c](https://github.com/sebacruz/webpack-config/commit/cc8957c))
 
-<a name="1.0.0"></a>
 # [1.0.0](https://github.com/sebacruz/webpack-config/compare/d4e86dd...1.0.0) (2018-10-22)
 
 ### Features
