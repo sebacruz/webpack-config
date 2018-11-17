@@ -1,5 +1,11 @@
 # Changelog
 
+# [1.2.0](https://github.com/sebacruz/webpack-config/compare/1.1.2...1.2.0) (2018-11-17)
+
+### Features
+
+* Enable JSX syntax ([a4caea3](https://github.com/sebacruz/webpack-config/commit/a4caea3))
+
 ## [1.1.2](https://github.com/sebacruz/webpack-config/compare/1.1.1...1.1.2) (2018-11-12)
 
 ### Bug Fixes
