@@ -36,7 +36,13 @@ module.exports = nextConfig => {
                 {
                   modules: false
                 }
-              ]
+              ],
+              ['@babel/preset-react']
+            ],
+            plugins: [
+              '@babel/plugin-proposal-class-properties',
+              ['@babel/plugin-proposal-decorators', { legacy: true }],
+              '@babel/plugin-proposal-export-namespace-from'
             ]
           }
         }
