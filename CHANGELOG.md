@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.3.0](https://github.com/sebacruz/webpack-config/compare/1.2.0...1.3.0) (2018-12-21)
+
+### Bug Fixes
+
+* Fix merge order and override env specific variables ([ed59ff3](https://github.com/sebacruz/webpack-config/commit/ed59ff3))
+* Fix some audit errors ([ba9f5fe](https://github.com/sebacruz/webpack-config/commit/ba9f5fe))
+
 # [1.2.0](https://github.com/sebacruz/webpack-config/compare/1.1.2...1.2.0) (2018-11-17)
 
 ### Features
