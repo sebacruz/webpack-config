@@ -8,10 +8,6 @@ const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 module.exports = nextConfig => {
   const config = {
-    mode: 'production',
-    output: {
-      filename: '[name].[chunkhash].js'
-    },
     module: {
       rules: []
     },
@@ -93,5 +89,10 @@ module.exports = nextConfig => {
 
   config.plugins.push(new ImageminWebpWebpackPlugin());
 
-  return merge.smart(config, nextConfig);
+  return merge.smart(config, nextConfig, {
+    mode: 'production',
+    output: {
+      filename: '[name].[chunkhash].js'
+    }
+  });
 };

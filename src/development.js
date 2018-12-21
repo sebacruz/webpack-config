@@ -3,8 +3,6 @@ const merge = require('webpack-merge');
 
 module.exports = nextConfig => {
   const config = {
-    mode: 'development',
-    devtool: 'inline-source-map',
     output: {
       filename: '[name].js'
     },
@@ -84,5 +82,8 @@ module.exports = nextConfig => {
     // The `contentBase` property should be setted by-project.
   };
 
-  return merge.smart(config, nextConfig);
+  return merge.smart(config, nextConfig, {
+    mode: 'development',
+    devtool: 'inline-source-map'
+  });
 };
