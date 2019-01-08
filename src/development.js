@@ -1,3 +1,5 @@
+const path = require('path');
+const { existsSync } = require('fs');
 const { HotModuleReplacementPlugin } = require('webpack');
 const merge = require('webpack-merge');
 
@@ -22,6 +24,16 @@ module.exports = nextConfig => {
     ]
   });
 
+  const projectPostCssConfig = path.resolve(process.cwd(), 'postcss.config.js');
+  const postCssOptions = {
+    sourceMap: true,
+    config: {}
+  };
+
+  if (!existsSync(projectPostCssConfig)) {
+    postCssOptions.config.path = path.resolve(__dirname, '../config');
+  }
+
   config.module.rules.push({
     test: /\.css$/,
     use: [
@@ -34,6 +46,10 @@ module.exports = nextConfig => {
           importLoaders: 1,
           sourceMap: true
         }
+      },
+      {
+        loader: 'postcss-loader',
+        options: postCssOptions
       }
     ]
   });
@@ -50,6 +66,10 @@ module.exports = nextConfig => {
           importLoaders: 1,
           sourceMap: true
         }
+      },
+      {
+        loader: 'postcss-loader',
+        options: postCssOptions
       },
       {
         loader: 'resolve-url-loader'

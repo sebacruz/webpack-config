@@ -25,6 +25,26 @@ module.exports = nextConfig => {
   }
 
   config.module.rules.push({
+    test: /\.css$/,
+    use: [
+      {
+        loader: MiniCssExtractPlugin.loader
+      },
+      {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1,
+          sourceMap: true
+        }
+      },
+      {
+        loader: 'postcss-loader',
+        options: postCssOptions
+      }
+    ]
+  });
+
+  config.module.rules.push({
     test: /\.scss$/,
     use: [
       {
