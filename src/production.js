@@ -1,10 +1,9 @@
-const path = require('path');
-const { existsSync } = require('fs');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const { getPostCssConfig } = require('./utils');
 
 module.exports = nextConfig => {
   const config = {
@@ -14,15 +13,7 @@ module.exports = nextConfig => {
     plugins: []
   };
 
-  const projectPostCssConfig = path.resolve(process.cwd(), 'postcss.config.js');
-  const postCssOptions = {
-    sourceMap: true,
-    config: {}
-  };
-
-  if (!existsSync(projectPostCssConfig)) {
-    postCssOptions.config.path = path.resolve(__dirname, '../config');
-  }
+  const postCssOptions = getPostCssConfig();
 
   config.module.rules.push({
     test: /\.css$/,

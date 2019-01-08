@@ -1,7 +1,6 @@
-const path = require('path');
-const { existsSync } = require('fs');
 const { HotModuleReplacementPlugin } = require('webpack');
 const merge = require('webpack-merge');
+const { getPostCssConfig } = require('./utils');
 
 module.exports = nextConfig => {
   const config = {
@@ -14,6 +13,8 @@ module.exports = nextConfig => {
     plugins: []
   };
 
+  const postCssOptions = getPostCssConfig();
+
   config.module.rules.push({
     test: /\.js$/,
     exclude: /(node_modules|bower_components)/,
@@ -23,16 +24,6 @@ module.exports = nextConfig => {
       }
     ]
   });
-
-  const projectPostCssConfig = path.resolve(process.cwd(), 'postcss.config.js');
-  const postCssOptions = {
-    sourceMap: true,
-    config: {}
-  };
-
-  if (!existsSync(projectPostCssConfig)) {
-    postCssOptions.config.path = path.resolve(__dirname, '../config');
-  }
 
   config.module.rules.push({
     test: /\.css$/,
