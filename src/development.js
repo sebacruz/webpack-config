@@ -75,7 +75,7 @@ module.exports = nextConfig => {
   });
 
   config.module.rules.push({
-    test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)(\?\S*)?$/,
+    test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2)(\?\S*)?$/,
     use: [
       {
         loader: 'url-loader'
