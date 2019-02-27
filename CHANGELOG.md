@@ -1,3 +1,7 @@
+## [1.3.5](https://github.com/sebacruz/webpack-config/compare/1.3.4...1.3.5) (2019-02-27)
+
+
+
 ## [1.3.4](https://github.com/sebacruz/webpack-config/compare/1.3.3...1.3.4) (2019-01-24)
 
 
