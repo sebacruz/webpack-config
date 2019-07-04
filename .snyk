@@ -1,0 +1,36 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - webpack-dev-server > http-proxy-middleware > lodash:
+        patched: '2019-07-04T07:06:21.169Z'
+    - lodash:
+        patched: '2019-07-04T07:06:21.169Z'
+    - webpack-manifest-plugin > lodash:
+        patched: '2019-07-04T07:06:21.169Z'
+    - css-loader > lodash:
+        patched: '2019-07-04T07:06:21.169Z'
+    - '@babel/core > lodash':
+        patched: '2019-07-04T07:06:21.169Z'
+    - node-sass > sass-graph > lodash:
+        patched: '2019-07-04T07:06:21.169Z'
+    - '@babel/core > @babel/generator > lodash':
+        patched: '2019-07-04T07:06:21.169Z'
+    - webpack-merge > lodash:
+        patched: '2019-07-04T07:06:21.169Z'
+    - '@babel/core > @babel/generator > @babel/types > lodash':
+        patched: '2019-07-04T07:06:21.169Z'
+    - node-sass > gaze > globule > lodash:
+        patched: '2019-07-04T07:06:21.169Z'
+    - '@babel/plugin-proposal-class-properties > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2019-07-04T07:06:21.169Z'
+    - '@babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2019-07-04T07:06:21.169Z'
+    - '@babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2019-07-04T07:06:21.169Z'
+    - '@babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-04T07:06:21.169Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-04T07:06:21.169Z'
