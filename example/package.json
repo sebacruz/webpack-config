@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "build:dev": "webpack --config webpack.dev.js",
-    "start:dev": "webpack-dev-server --config webpack.dev.js"
+    "start:dev": "webpack-dev-server --config webpack.dev.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Sebastian Cruz <sebacruzcode@gmail.com>",
   "license": "MIT",
@@ -20,6 +22,8 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
-    "webpack-dev-server": "^3.1.9"
-  }
+    "webpack-dev-server": "^3.1.9",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
