@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@sebacruz/webpack-config": "^1.0.0",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^9.0.0",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
     "postcss-loader": "^3.0.0",
